@@ -22,3 +22,10 @@ DockingStation  | release_bike
 * Person -> .use(bike)
 * Bike -> .working?
 * DockingStation -> .release(bike)
+
+## Error messages in IRB
+Type of Error  | Path of Error | Line number of Error
+------------- | ------------- | -------------
+uninitialized constant | /Users/lillydaniell/.rvm/rubies/ruby-3.0.0/bin/irb:23:in | 23
+
+Note: `Stack Trace` is a human readable representation within the error message
