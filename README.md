@@ -19,7 +19,7 @@ Bike  | working (working bike = good bike)
 DockingStation  | release_bike
 
 ## Classes
-* Person -> .use(bike)irb
+* Person -> .use(bike)
 
 * Bike -> .working?
 * DockingStation -> .release(bike)
