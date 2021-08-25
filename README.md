@@ -15,12 +15,13 @@ working
 Objects  | Messages
 ------------- | -------------
 Person  | use_bike
-Bike  | working (working bike = good bike)
+Bike  | working (working_bike? = good bike)
 DockingStation  | release_bike
+Person | return_bike
+DockingStation | dock_bike
 
 ## Classes
 * Person -> .use(bike)
-
 * Bike -> .working?
 * DockingStation -> .release(bike)
 
