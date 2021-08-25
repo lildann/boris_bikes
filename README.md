@@ -19,6 +19,7 @@ Bike  | working (working_bike? = good bike)
 DockingStation  | release_bike
 Person | return_bike
 DockingStation | dock_bike
+DockingStation | do_not_release(bike) if none available 
 
 ## Classes
 * Person -> .use(bike)
