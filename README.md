@@ -1,5 +1,7 @@
 ## Challenge 1 : Boris Bikes
 Makers first challenge featuring Boris Bikes
+Build a program that emulate all docking stations, bikes and infrastructure for TFL. 
+
 
 ## Nouns
 * person
@@ -16,15 +18,14 @@ Objects  | Messages
 ------------- | -------------
 Person  | use_bike
 Bike  | working (working_bike? = good bike)
-DockingStation  | release_bike
+DockingStation  | release_bike (=error if none available)
 Person | return_bike
 DockingStation | dock_bike
-DockingStation | do_not_release(bike) if none available 
 
 ## Classes
-* Person -> .use(bike)
+* Person -> .use_bike
 * Bike -> .working?
-* DockingStation -> .release(bike)
+* DockingStation -> .release_bike -> Bike
 
 ## Error messages in IRB
 Type of Error  | Path of Error | Line number of Error
