@@ -14,16 +14,23 @@ describe DockingStation do # this is the subject
       expect(bike).to be_working # "checks that bike is working" 
     end
     it 'raises an error if no bikes available' do
+      bike = Bike.new
       expect {subject.release_bike}.to raise_error('No bikes available')
     end
     # this is throwing an error even when a bike exists
+    it 'raises an error if no space available at Docking station' do
+      bike = Bike.new
+      subject.dock_bike(bike)
+      expect {subject.dock_bike(bike)}.to raise_error('Docking station full')
+    end
+
   end
 
 end
 
 
 
-  # it { is_expected.to respond_to(:bike) }
+  # it { is_expected.to respond_to(:bike) } - no longer necessary with attr_reader :bike
 
   # describe '#release_bike' do #nested describe block introduced with #
   #   it 'raises an error if no bikes available' do
