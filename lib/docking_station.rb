@@ -14,11 +14,10 @@ class DockingStation
     @bikes_available.pop
   end
 
-
   def dock_bike(bike)
     @bike = bike
     fail "Docking station full" if @bikes_available.length >= @STATION_CAPACITY
-    @bikes_available.push(@bike)
+    @bikes_available << @bike
     @bike 
   end
 
