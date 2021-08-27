@@ -11,17 +11,15 @@ describe DockingStation do # this is the subject
       bike = Bike.new
       subject.dock_bike(bike)
       expect(subject.release_bike).to eq bike 
-      expect(bike).to be_working # "checks that bike is working" 
+      expect(bike).to be_working 
     end
     it 'raises an error if no bikes available' do
-      bike = Bike.new
       expect {subject.release_bike}.to raise_error('No bikes available')
     end
-    # this is throwing an error even when a bike exists
+   
     it 'raises an error if no space available at Docking station' do
-      bike = Bike.new
-      subject.dock_bike(bike)
-      expect {subject.dock_bike(bike)}.to raise_error('Docking station full')
+      20.times { subject.dock_bike Bike.new }
+      expect {subject.dock_bike(Bike.new)}.to raise_error('Docking station full')
     end
 
   end

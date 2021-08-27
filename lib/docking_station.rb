@@ -5,8 +5,8 @@ class DockingStation
   # attr_reader :bike # defines an automatic read method @bike for every instance of DockingStation
   # is the same as:
   def initialize
+    @STATION_CAPACITY = 20
     @bikes_available = []
-    puts "Instatiated"
   end
 
   def release_bike
@@ -17,10 +17,9 @@ class DockingStation
 
   def dock_bike(bike)
     @bike = bike
-    fail "Docking station full" if @bikes_available.length > 0
+    fail "Docking station full" if @bikes_available.length >= @STATION_CAPACITY
     @bikes_available.push(@bike)
     @bike 
-    
   end
 
 end 
